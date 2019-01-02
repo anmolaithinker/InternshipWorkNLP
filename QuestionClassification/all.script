@@ -1,0 +1,68 @@
+0 inc : leng
+0 inc loc : r|phr
+0 inc loc : ab(X)
+0 inc : w|t
+0 inc : w&t
+0 inc : rw[0,5]
+0 inc : rt[0,5]
+0 inc loc : t&cap(X)
+0 inc : coloc(w|t,w|t)
+0 inc : coloc(w&t,w&t)
+0 inc : coloc(phr,phr)
+0 inc : coloc(rw|rt,rw|rt)[0,5]
+0 inc loc : FirstTagNENN[0,0]
+0 inc loc : FirstTagNEADJ[0,0]
+0 inc loc : FirstTagNEV[0,0]
+0 inc loc : FirstTagNEIN[0,0]
+0 inc loc : FirstTagPHNN[0,0]
+0 inc loc : FirstTagPHADJ[0,0]
+0 inc loc : FirstTagPHV[0,0]
+0 inc loc : FirstTagPHIN[0,0]
+0 inc loc : FirstTagWNN[0,0]
+0 inc loc : FirstTagWADJ[0,0]
+0 inc loc : FirstTagWV[0,0]
+0 inc loc : FirstTagWIN[0,0]
+0 inc loc : FirstTagPOSNN[0,0]
+0 inc loc : FirstTagPOSADJ[0,0]
+0 inc loc : FirstTagPOSV[0,0]
+0 inc loc : FirstTagPOSIN[0,0]
+0 inc : other|currency|code|num|ord|speed|time|weight|body|def|desc|quot|tech|letter|symbol|word|color|abb|act|anim|art|cause|city|comp|country|date|dimen|dise|dist|eff|event|food|mount|popu|prod|term
+0 inc : religion|lang|loca|name|substance|instrument|peop|perc|plant|prof|sport|state|temp|title|unit|univ|money|vessel|job|group
+BB=w(x=When)|w(x=when)
+BG=w(x=many)|w(x=much)
+CB=t(x=NN)|t(x=NNP)|t(x=NNS)
+CC=suf(x=ress)|suf(x=ers)|suf(x=ors)
+ED=w(x=famous)|w(x=known)
+EF=w(x=for)|w(x=as)
+HUMAN=CC&CB
+0 inc : coloc(CB(X),CB(X))
+0 inc : scoloc(be,CB(X)&w)
+0 inc : scoloc(What,r)
+0 inc : scoloc(stand|term|abb|name|word|letter|symbol,w(x=for))
+0 inc : scoloc(ED,EF)
+0 inc : coloc(In|On|InOn|At,What)
+0 inc : coloc(In|On|InOn|At,What,w)
+0 inc : coloc(presentBe|singleBe|pastBe|be|do|What|BB(X)|Who|Where|How|BG,w)
+0 inc : coloc(presentBe|singleBe|pastBe|be|do|What|BB(X)|Who|Where|How|BG,t)
+0 inc : coloc(How,w(x=many)|w(x=much),w|t)
+0 inc : coloc(How,BG|big|fast|last|temp|dist|dimen|num|speed)
+0 inc : coloc(How,t(x=JJ)&w)
+0 inc : scoloc(How,t(x=VBD)&w)
+0 inc : scoloc(How,t(x=VBN)&w)
+0 inc : scoloc(How,unit|peop|money|dist|perc|dimen|def|ord|time|weight)
+0 inc : scoloc(How,w(x=much),weight)
+0 inc : scoloc(How,BG,w|t)
+0 inc : coloc(What|How,t,t)
+0 inc : coloc(What,w,w)
+0 inc : scoloc(What,w(x=QM))
+0 inc : scoloc(What,CB(X)&w)
+0 inc : scoloc(What|How,r)
+0 inc : What|BB(X)|Who|Why|Where|How|an|CB(X)|HUMAN|stand|In|On|InOn|At|culture|speak
+0 inc : scoloc(What,w(x=nationality)|w(x=for))
+0 inc : coloc(w(x=When)|How|Where|What,presentBe|singleBe|pastBe|be|do)
+0 inc : scoloc(What,abb(X)|cap(X)|ab(X)|substance|currency|religion|instrument|last|other|code|num|ord|speed|time|weight|body|def|desc|quot|state|abb|dimen|plant|popu|group|title|mount|dise|job|act|prod|art|vessel|food|anim|abb|term|city|comp|country|date|eff|dist|event|lang|loca|money|name|peop|perc|sport|prof|temp|title|univ|vessel|eff|cause|tech|letter|symbol|word|color)
+0 inc : scoloc(w(x=part),w(x=body))
+0 inc : scoloc(Where,w(x=come), w(x=from))
+0 inc : scoloc(Where|w(x=When),cap(X))
+0 inc : coloc(w(x=in),w(x=the),w(x=world))
+0 inc : scoloc(At,w(x=age))
